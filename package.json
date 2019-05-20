@@ -1,17 +1,16 @@
 {
-    "name": "Emroz-toto-with-dynamodb",
-    "version": "1.0.0",
-    "description": "Serverless CRUD service exposing a REST HTTP interface",
-    "author": "",
-    "license": "MIT",
-    "dependencies": {
-      "uuid": "^2.0.3",
-      "humanize-ms": "1.0.1",
-      "ms": "^0.7.1",
-      "dustjs-linkedin": "2.5.0",
-      "dustjs-helpers": "1.5.0",
-      "ejs-locals": "1.0.2",
-      "qs": "6.3.1"
-    }
+  "name": "Emroz-toto-with-dynamodb",
+  "version": "1.0.0",
+  "description": "Serverless CRUD service exposing a REST HTTP interface",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^2.0.3",
+    "humanize-ms": "1.0.1",
+    "ms": "^0.7.1",
+    "dustjs-linkedin": "2.5.0",
+    "dustjs-helpers": "1.5.0",
+    "ejs-locals": "1.0.2",
+    "qs": "6.3.1"
   }
-  
+}

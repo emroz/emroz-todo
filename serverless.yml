@@ -24,13 +24,63 @@ provider:
         - lambda:InvokeAsync
       Resource: "*"
 
-   list:
+functions:
+  create:
+    handler: todos/create.create
+    events:
+      - http:
+          path: todos
+          method: post
+          cors: true
+
+  list:
     handler: todos/list.list
     events:
       - http:
           path: todos
           method: get
           cors: true
+
+  get:
+    handler: todos/get.get
+    events:
+      - http:
+          path: todos/{id}
+          method: get
+          cors: true
+
+  update:
+    handler: todos/update.update
+    events:
+      - http:
+          path: todos/{id}
+          method: put
+          cors: true
+
+  delete:
+    handler: todos/delete.delete
+    events:
+      - http:
+          path: todos/{id}
+          method: delete
+          cors: true
+          
+  render:
+    handler: todos/render.render
+    events:
+      - http:
+          path: todos/render
+          method: get
+          integration: lambda
+          request:
+            parameters:
+              querystrings:
+                url: true
+          response:
+            headers:
+              Content-Type: "'text/html'"
+            template: $input.path('$.data')
+
   
 
 resources:
